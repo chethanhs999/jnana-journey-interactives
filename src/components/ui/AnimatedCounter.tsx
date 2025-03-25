@@ -33,11 +33,18 @@ export default function AnimatedCounter({
           
           const start = 0;
           const startTimestamp = performance.now();
+          
+          // Using easeOutExpo for a more natural animation feel
+          const easeOutExpo = (t: number): number => {
+            return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+          };
+          
           const step = (timestamp: number) => {
             if (!hasAnimated) return;
             
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const currentCount = Math.floor(progress * (end - start) + start);
+            const easedProgress = easeOutExpo(progress);
+            const currentCount = Math.floor(easedProgress * (end - start) + start);
             
             setCount(currentCount);
             
@@ -67,19 +74,28 @@ export default function AnimatedCounter({
     <div
       ref={counterRef}
       className={cn(
-        "flex flex-col items-center p-4 transition-all duration-500",
+        "flex flex-col items-center p-4 transition-all duration-500 hover:transform hover:scale-105",
         className
       )}
       style={style}
     >
-      <div className="text-3xl md:text-4xl font-bold font-serif mb-2 text-jnana-900">
-        {prefix}
-        <span className="inline-block min-w-[1.5ch] text-center">
-          {hasAnimated ? count : 0}
-        </span>
-        {suffix}
+      <div className="relative">
+        <div className="text-3xl md:text-4xl font-bold font-serif mb-2 text-jnana-900 relative z-10">
+          {prefix}
+          <span className="inline-block min-w-[1.5ch] text-center">
+            {hasAnimated ? count : 0}
+          </span>
+          {suffix}
+        </div>
+        {hasAnimated && (
+          <div className="absolute -inset-1 bg-jnana-50 rounded-lg -z-10 animate-pulse opacity-70" />
+        )}
       </div>
-      {title && <div className="text-jnana-600 text-center font-medium">{title}</div>}
+      {title && (
+        <div className="text-jnana-600 text-center font-medium transition-all duration-300">
+          {title}
+        </div>
+      )}
     </div>
   );
 }

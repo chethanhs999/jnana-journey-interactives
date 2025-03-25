@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Check, BookOpen, GraduationCap, Award } from "lucide-react";
 import SectionTitle from "../ui/SectionTitle";
@@ -147,7 +146,7 @@ export default function AboutSection() {
           ))}
         </div>
 
-        <div className="bg-jnana-50 rounded-2xl p-8 md:p-12">
+        <div className="bg-jnana-50 rounded-2xl p-8 md:p-12 shadow-md">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <AnimatedCounter
