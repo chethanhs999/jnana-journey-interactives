@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef, CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
@@ -34,7 +33,6 @@ export default function AnimatedCounter({
           const start = 0;
           const startTimestamp = performance.now();
           
-          // Using easeOutExpo for a more natural animation feel
           const easeOutExpo = (t: number): number => {
             return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
           };
