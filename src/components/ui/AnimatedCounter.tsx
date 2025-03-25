@@ -1,5 +1,5 @@
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 interface AnimatedCounterProps {
@@ -9,6 +9,7 @@ interface AnimatedCounterProps {
   suffix?: string;
   title?: string;
   className?: string;
+  style?: CSSProperties;
 }
 
 export default function AnimatedCounter({
@@ -18,6 +19,7 @@ export default function AnimatedCounter({
   suffix = "",
   title,
   className,
+  style,
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -68,6 +70,7 @@ export default function AnimatedCounter({
         "flex flex-col items-center p-4 transition-all duration-500",
         className
       )}
+      style={style}
     >
       <div className="text-3xl md:text-4xl font-bold font-serif mb-2 text-jnana-900">
         {prefix}
