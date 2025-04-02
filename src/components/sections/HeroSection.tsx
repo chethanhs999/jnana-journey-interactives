@@ -13,8 +13,8 @@ const heroImages = [
     caption: "Excellence in education since 1985"
   },
   {
-    url: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1600&auto=format&fit=crop",
-    alt: "Students in classroom",
+    url: "/lovable-uploads/4c88ca39-7064-4100-a114-50d44ef29314.png",
+    alt: "Students attentively learning in a classroom",
     caption: "Creating tomorrow's leaders today"
   }
 ];
