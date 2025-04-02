@@ -1,10 +1,8 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ProgramsSection from "@/components/sections/ProgramsSection";
-import FacultySection from "@/components/sections/FacultySection";
 import ContactSection from "@/components/sections/ContactSection";
 
 const Index = () => {
@@ -38,7 +36,6 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <ProgramsSection />
-      <FacultySection />
       <ContactSection />
       
       <footer className="bg-jnana-900 text-white py-12">
