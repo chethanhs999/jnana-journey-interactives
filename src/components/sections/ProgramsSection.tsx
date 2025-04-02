@@ -6,6 +6,21 @@ import SectionTitle from "../ui/SectionTitle";
 
 const programs = [
   {
+    id: "kindergarten",
+    title: "Kindergarten",
+    grades: "Pre-K to UKG",
+    description:
+      "Nurturing young minds through play-based learning that develops social skills and creates a love for discovery.",
+    features: [
+      "Play-based learning approach",
+      "Foundational literacy and numeracy",
+      "Creative arts and expression",
+      "Social skills development",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1543248939-ff40856f65d4?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
     id: "primary",
     title: "Primary School",
     grades: "Classes 1-5",
@@ -68,7 +83,7 @@ const programs = [
 ];
 
 export default function ProgramsSection() {
-  const [activeTab, setActiveTab] = useState("primary");
+  const [activeTab, setActiveTab] = useState("kindergarten");
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
