@@ -3,13 +3,13 @@ import ImageSlider from "../ui/ImageSlider";
 
 const heroImages = [
   {
-    url: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop",
-    alt: "School building",
+    url: "/lovable-uploads/3808c79f-690b-40cb-8b16-6b39d431e33e.png",
+    alt: "Jnana Bharthi School building with students gathering",
     caption: "Nurturing minds, Shaping futures"
   },
   {
-    url: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1600&auto=format&fit=crop",
-    alt: "School lab",
+    url: "/lovable-uploads/2b982401-a58d-4590-a835-d5ad76c18768.png",
+    alt: "Jnana Bharthi School building lit up in the evening",
     caption: "Excellence in education since 1985"
   },
   {
