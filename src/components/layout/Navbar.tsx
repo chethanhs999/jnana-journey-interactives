@@ -30,7 +30,7 @@ export default function Navbar() {
   }, []);
   return <nav className={cn("fixed w-full z-50 transition-all duration-300", isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 bg-gray-300">
+        <div className="flex justify-between items-center h-20 bg-gray-300 px-[41px] mx-[15px] my-[2px] py-0">
           <div className="flex items-center">
             <a href="#home" className="flex items-center space-x-2">
               <span className="h-10 w-10 bg-gradient-to-br from-jnana-700 to-jnana-900 rounded-md flex items-center justify-center">
